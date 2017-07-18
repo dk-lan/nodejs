@@ -20,9 +20,9 @@ REPL 只适用于一些简单的 Javascript 语法，对于稍复杂的程序，
 # 模块
 模块系统是 Node.js 最基本也是最常用的。一般情况模块可分为四类：
 - 原生模块
-    - [url 模块](https://github.com/dk-lan/nodejs/module/url)
-    - [querystring 模块](https://github.com/dk-lan/nodejs/module/querystring)
-    - [http 模块](https://github.com/dk-lan/nodejs/module/http)
+    - [url 模块](https://github.com/dk-lan/nodejs/tree/master/module/url)
+    - [querystring 模块](https://github.com/dk-lan/nodejs/tree/master/module/querystring)
+    - [http 模块](https://github.com/dk-lan/nodejs/tree/master/module/http)
 - [文件模块](https://github.com/dk-lan/nodejs/module/fs)
 - [第三方模块](https://github.com/dk-lan/nodejs/express)
 - [自定义模块](https://github.com/dk-lan/nodejs/module/defined)
