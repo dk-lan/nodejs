@@ -25,5 +25,8 @@ REPL 只适用于一些简单的 Javascript 语法，对于稍复杂的程序，
     - [http 模块](https://github.com/dk-lan/nodejs/tree/master/module/http)
     - [events 模块](https://github.com/dk-lan/nodejs/tree/master/module/events)
 - [文件模块](https://github.com/dk-lan/nodejs/tree/master/module/fs)
-- [第三方模块](https://github.com/dk-lan/nodejs/express)
+- 第三方模块
+    - [express](https://github.com/dk-lan/nodejs/tree/master/module/express)
+    - [websocket](https://github.com/dk-lan/nodejs/tree/master/module/websocket)
+    - [socket.io](https://github.com/dk-lan/nodejs/tree/master/module/socketio)
 - [自定义模块](https://github.com/dk-lan/nodejs/tree/master/module/defined)
