@@ -44,12 +44,24 @@ app.get('/index.html', function (req, res) {
 });
 ```
 
-- get 参数接收，访问地址：http://localhost:8080/getusers?username=dk&age=18，可通过 `request.query` 来获取参数
+### Express -- GET 参数接收之 Query Strings
+访问地址：`http://localhost:8080/getusers?username=dk&age=18`，可通过 `request.query` 来获取参数
 ```javascript
 app.get('/getUsers', function(request, response){
     var params = {
         username: request.query.username,
         age: request.query.age
+    }
+    response.send(params);
+})
+```
+### Express -- GET 参数接收之路径方式
+访问地址：`http://localhost:8080/getusers/admin/18`，可通过 `request.params` 来获取参数
+```javascript
+app.get('/getUsers/:username/:age', function(request, response){
+    var params = {
+        username: request.params.username,
+        age: request.params.age
     }
     response.send(params);
 })
@@ -72,42 +84,7 @@ app.post('/getUsers', urlencodedParser, function (request, response) {
 });
 ```
 
-## Express -- POST 文件上传
-- body-parser 并不技术文件上传，所以这里要用到另一个第三方模块 multer
-- 安装 multer `npm install multer`
-- 使用前先定义上传的路径
-```javascript
-//引入express模块  
-var express = require('express');  
-//引入multer模块  
-var multer = require ('multer');
-var path = require('path')  ;
-//设置上传的目录，  
-var upload = multer({ dest:  path.join(__dirname,'temp')});  
-var app = express();  
-```
-- 单文件上传
-```javascript
-//注意上传界面中的 <input type="file" name="avatar"/>中的name必须是下面代码中指定的名称  
-app.post('/singleUpload', upload.single('avatar'), function (req, res, next) {  
-  console.log(req.file);  
-  console.log(req.body);  
-  res.end("上传成功");  
-});  
-```
-- 多文件上传  
-```javascript
-//注意上传界面中的 <input type="file" name="photos"/>中的name必须是下面代码中指定的名  
-app.post('/mulUpload', upload.array('photos', 12), function (req, res, next) {  
-    
-  console.log(req.files);  
-  console.log(req.body);  
-  res.end(req.file + "<br/><br/>" + req.body);  
-}) 
-```
-除了文件内容，其它的 POST 信息同样可以像 body-parser 一样直接用 `request.body` 进行获取。
-
-## Express -- 跨域支持
+## Express -- 跨域支持(放在最前面)
 ```javascript
 app.all('*', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
