@@ -58,10 +58,6 @@ request.post('http://service.com/upload').form({key:'value'})
 request.post({url:'http://service.com/upload', form: {key:'value'}}, function(err,httpResponse,body){ /* ... */ })
 ```
 
-### multipart/form-data
-```javascript
-```
-
 ### multipart/form-data (Multipart Form Uploads)
 ```javascript
 var formData = {

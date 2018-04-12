@@ -32,12 +32,8 @@
     - MySql 基础
     - [Node.js 操作 MySql](https://github.com/dk-lan/nodejs/tree/master/module/multer/db)
 6. Session 与 Token
-    - Session 介绍
-    - Session 使用
-    - Token 介绍
-    - Token 使用
+    - [Session](https://github.com/dk-lan/nodejs/tree/master/module/multer/session)
+    - [Token](https://github.com/dk-lan/nodejs/tree/master/module/multer/session)
 7. Socket 
-    - Socket 简介和通讯流程
-    - 基于 net 模块实现 socket
-    - WebSocket
-    - Socket.io
+    - [WebSocket](https://github.com/dk-lan/nodejs/tree/master/module/multer/websocket)
+    - [Socket.io](https://github.com/dk-lan/nodejs/tree/master/module/multer/socketio)
