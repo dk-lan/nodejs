@@ -23,7 +23,7 @@ app.get('/:name/:pwd', filter, (req, res) => {
 ### 运行规则
 - 访问 `http://localhost:88/admin/admin`
 - 首先会进入过滤器方法 filter
-- next()，不带任选参数，表示会直接进入目标路由，执行路由逻辑
+- next()，不带任何参数，表示会直接进入目标路由，执行路由逻辑
 - next('')，带参数，表示不会进入目标路由，并抛出错误。
 
 ## 全局使用--use
